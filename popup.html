@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TycoonTabManager Settings</title>
+    <style>
+      /* General Styles */
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(145deg, #f0f0f0, #dcdcdc);
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        width: 250px;
+        height: 220px;
+      }
+
+      h3 {
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        outline: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      input[type="number"]:focus {
+        border-color: #4CAF50;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      .label-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 0;
+      }
+
+      /* Toggle Switch Styles */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 25px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 25px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 19px;
+        width: 19px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      input:checked + .slider {
+        background-color: #4CAF50;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(25px);
+      }
+
+      /* Save Button Styles */
+      button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Refresh Settings</h3>
+    <!-- Input for setting refresh interval -->
+    <input id="intervalInput" type="number" min="1" value="5" placeholder="Set Refresh Interval (min)">
+    
+    <!-- Toggle auto-refresh -->
+    <div class="label-group">
+      <label for="refreshToggle">Enable Auto Refresh</label>
+      <label class="switch">
+        <input type="checkbox" id="refreshToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Save button -->
+    <button id="saveButton">Save Settings</button>
+
+    <!-- Link to external JS file -->
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "TycoonTabManager",
+    "version": "1.0",
+    "description": "A quick and easy manager for all web-based tycoon games",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting"
+    ],
+    "icons": {
+        "16": "/images/16.png",
+        "48": "/images/48.png",
+        "128": "/images/128.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://orteil.dashnet.org/cookieclicker/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
