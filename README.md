@@ -48,4 +48,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any inquiries, feel free to reach out to me at [discordaccoun34@gmail.com](mailto:discordaccoun34@gmail.com).
+For any inquiries dont
